@@ -13,7 +13,7 @@ class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
         title: const Text('RingTonesPremiumPageView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'RingTonesPremiumPageView is working',
           style: TextStyle(fontSize: 20),

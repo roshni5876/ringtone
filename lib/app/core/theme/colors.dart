@@ -4,7 +4,7 @@ class AppColors {
   static const Color black2 = Color(0xFF121212);
   static Color? primaryColor = Colors.purple[400];
   static Color? blue = Colors.blue[800];
-  static Color? white = Colors.white;
+  static Color white = Colors.white;
   static Color? red = Colors.red[800];
   static Color? orange = Colors.orange[900];
   static Color? red400 = Colors.red[400];

@@ -21,7 +21,6 @@ class HomeView extends GetView<HomeController> {
                   direction: AnimatedCardDirection.left,
                   initDelay: const Duration(milliseconds: 0),
                   duration: const Duration(seconds: 1),
-                  // onRemove: () => lista.removeAt(index), //Implement this action to active dismiss
                   curve: Curves.bounceOut,
                   child: Column(
                     children: [
@@ -92,7 +91,6 @@ class HomeView extends GetView<HomeController> {
                   direction: AnimatedCardDirection.right,
                   initDelay: const Duration(milliseconds: 0),
                   duration: const Duration(seconds: 1),
-                  // onRemove: () => lista.removeAt(index), //Implement this action to active dismiss
                   curve: Curves.bounceOut,
                   child: Column(
                     children: [
@@ -166,11 +164,10 @@ class HomeView extends GetView<HomeController> {
               direction: AnimatedCardDirection.top,
               initDelay: const Duration(milliseconds: 0),
               duration: const Duration(seconds: 1),
-              // onRemove: () => lista.removeAt(index),
               curve: Curves.bounceOut,
               child: InkWell(
                 onTap: () {
-                  Get.toNamed(Routes.RING_TONES);
+                  Get.toNamed(Routes.RING_TONES, arguments: 0);
                 },
                 child: Container(
                   height: Get.height / 4,

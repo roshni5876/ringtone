@@ -14,7 +14,7 @@ class RingTonesFavoritesPageView
         title: const Text('RingTonesFavoritesPageView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'RingTonesFavoritesPageView is working',
           style: TextStyle(fontSize: 20),
