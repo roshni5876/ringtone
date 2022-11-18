@@ -11,6 +11,21 @@ abstract class Routes {
   static const RING_TONES_FAVORITES_PAGE = _Paths.RING_TONES_FAVORITES_PAGE;
   static const RING_TONES_PREMIUM_PAGE = _Paths.RING_TONES_PREMIUM_PAGE;
   static const RING_TONES_HOME_PAGE = _Paths.RING_TONES_HOME_PAGE;
+  static const ANIMATED_CALL_SCREEN_PAGE = _Paths.ANIMATED_CALL_SCREEN_PAGE;
+  static const ANIMATED_CALL_SCREEN_HOME_PAGE =
+      _Paths.ANIMATED_CALL_SCREEN_HOME_PAGE;
+  static const ANIMATED_CALL_SCREEN_SEARCH_PAGE =
+      _Paths.ANIMATED_CALL_SCREEN_SEARCH_PAGE;
+  static const ANIMATED_CALL_SCREEN_FAVORITES_PAGE =
+      _Paths.ANIMATED_CALL_SCREEN_FAVORITES_PAGE;
+  static const ANIMATED_CALL_SCREEN_PREMIUM_PAGE =
+      _Paths.ANIMATED_CALL_SCREEN_PREMIUM_PAGE;
+  static const CLASSICAL_MUSIC_PAGE = _Paths.CLASSICAL_MUSIC_PAGE;
+  static const LIVE_WALLPAPERS_PAGE = _Paths.LIVE_WALLPAPERS_PAGE;
+  static const UNIT_CONVERTER_HOME_PAGE = _Paths.UNIT_CONVERTER_HOME_PAGE;
+  static const WALLPAPERS_HOME_PAGE = _Paths.WALLPAPERS_HOME_PAGE;
+  static const STICKERS_HOME_PAGE = _Paths.STICKERS_HOME_PAGE;
+  static const SETTINGS_PAGE = _Paths.SETTINGS_PAGE;
 }
 
 abstract class _Paths {
@@ -21,4 +36,19 @@ abstract class _Paths {
   static const RING_TONES_FAVORITES_PAGE = '/ring-tones-favorites-page';
   static const RING_TONES_PREMIUM_PAGE = '/ring-tones-premium-page';
   static const RING_TONES_HOME_PAGE = '/ring-tones-home-page';
+  static const ANIMATED_CALL_SCREEN_PAGE = '/animated-call-screen-page';
+  static const ANIMATED_CALL_SCREEN_HOME_PAGE =
+      '/animated-call-screen-home-page';
+  static const ANIMATED_CALL_SCREEN_SEARCH_PAGE =
+      '/animated-call-screen-search-page';
+  static const ANIMATED_CALL_SCREEN_FAVORITES_PAGE =
+      '/animated-call-screen-favorites-page';
+  static const ANIMATED_CALL_SCREEN_PREMIUM_PAGE =
+      '/animated-call-screen-premium-page';
+  static const CLASSICAL_MUSIC_PAGE = '/classical-music-page';
+  static const LIVE_WALLPAPERS_PAGE = '/live-wallpapers-page';
+  static const UNIT_CONVERTER_HOME_PAGE = '/unit-converter-home-page';
+  static const WALLPAPERS_HOME_PAGE = '/wallpapers-home-page';
+  static const STICKERS_HOME_PAGE = '/stickers-home-page';
+  static const SETTINGS_PAGE = '/settings-page';
 }
