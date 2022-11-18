@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../../ring_tones/views/bottom_navigtion.dart';
+import '../../../widgets/bottom_navigtion.dart';
 import '../controllers/ring_tones_search_page_controller.dart';
 
 class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {

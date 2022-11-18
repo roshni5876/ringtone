@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ring_tone/app/modules/animated_call_screen_page/controllers/animated_call_screen_page_controller.dart';
 
-import '../../../core/theme/colors.dart';
-import '../controllers/ring_tones_controller.dart';
+import '../core/theme/colors.dart';
+import '../modules/ring_tones/controllers/ring_tones_controller.dart';
 
 class RingTonesBottomNavigtion extends StatelessWidget {
   RingTonesBottomNavigtion({Key? key}) : super(key: key);
   final controller = Get.put(RingTonesController());
+  final animatedCallScareenController =
+      Get.put(AnimatedCallScreenPageController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,15 @@ class RingTonesBottomNavigtion extends StatelessWidget {
         ],
       ),
       child: BottomNavigationBar(
+          elevation: 0,
           backgroundColor: AppColors.black2,
           onTap: controller.selectPage,
           selectedItemColor: AppColors.primaryColor,
-          unselectedItemColor: AppColors.pink,
+          unselectedItemColor: AppColors.grey,
+          selectedLabelStyle:
+              const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+          unselectedLabelStyle:
+              const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
           currentIndex: controller.selectedTab,
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,

@@ -20,7 +20,7 @@ class RingTonesController extends GetxController {
 
   DateTime? currentBackPressTime;
 
-  List<Widget> widgetOptions = <Widget>[
+  List<Widget> ringTonesWidgetOptions = <Widget>[
     const RingTonesHomePageView(),
     const RingTonesSearchPageView(),
     const RingTonesFavoritesPageView(),

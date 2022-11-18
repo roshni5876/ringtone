@@ -11,20 +11,23 @@ class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: ListView(
-          children: [
-            Row(
-              children: [
-                AnimatedCard(
-                  direction: AnimatedCardDirection.left,
-                  initDelay: const Duration(milliseconds: 0),
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.bounceOut,
-                  child: Column(
-                    children: [
-                      Container(
+    return Scaffold(
+      body: Column(
+        children: [
+          Row(
+            children: [
+              AnimatedCard(
+                direction: AnimatedCardDirection.left,
+                initDelay: const Duration(milliseconds: 0),
+                duration: const Duration(seconds: 1),
+                curve: Curves.bounceOut,
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.STICKERS_HOME_PAGE);
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.purple500),
@@ -44,7 +47,12 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                      Container(
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.WALLPAPERS_HOME_PAGE);
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.orange),
@@ -64,7 +72,12 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                      Container(
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.CLASSICAL_MUSIC_PAGE);
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.blue),
@@ -84,17 +97,22 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                AnimatedCard(
-                  direction: AnimatedCardDirection.right,
-                  initDelay: const Duration(milliseconds: 0),
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.bounceOut,
-                  child: Column(
-                    children: [
-                      Container(
+              ),
+              AnimatedCard(
+                direction: AnimatedCardDirection.right,
+                initDelay: const Duration(milliseconds: 0),
+                duration: const Duration(seconds: 1),
+                curve: Curves.bounceOut,
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.UNIT_CONVERTER_HOME_PAGE);
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.pink),
@@ -114,7 +132,14 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                      Container(
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(
+                          Routes.LIVE_WALLPAPERS_PAGE,
+                        );
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.red400),
@@ -134,7 +159,14 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                      Container(
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(
+                          Routes.ANIMATED_CALL_SCREEN_HOME_PAGE,
+                        );
+                      },
+                      child: Container(
                         height: Get.height / 4,
                         width: Get.width / 2,
                         decoration: BoxDecoration(color: AppColors.green),
@@ -155,44 +187,46 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            AnimatedCard(
-              direction: AnimatedCardDirection.top,
-              initDelay: const Duration(milliseconds: 0),
-              duration: const Duration(seconds: 1),
-              curve: Curves.bounceOut,
-              child: InkWell(
-                onTap: () {
-                  Get.toNamed(Routes.RING_TONES, arguments: 0);
-                },
-                child: Container(
-                  height: Get.height / 4,
-                  width: Get.width,
-                  decoration: BoxDecoration(color: AppColors.red),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.queue_music_rounded,
-                        color: AppColors.white,
-                        size: 34,
-                      ),
-                      Text(
-                        'Ringtones',
-                        style: TextStyle(color: AppColors.white, fontSize: 20),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+              ),
+            ],
+          ),
+          AnimatedCard(
+            direction: AnimatedCardDirection.top,
+            initDelay: const Duration(milliseconds: 0),
+            duration: const Duration(seconds: 1),
+            curve: Curves.bounceOut,
+            child: InkWell(
+              onTap: () {
+                Get.toNamed(
+                  Routes.RING_TONES,
+                );
+              },
+              child: Container(
+                height: Get.height / 4,
+                width: Get.width,
+                decoration: BoxDecoration(color: AppColors.red),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.queue_music_rounded,
+                      color: AppColors.white,
+                      size: 34,
+                    ),
+                    Text(
+                      'Ringtones',
+                      style: TextStyle(color: AppColors.white, fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

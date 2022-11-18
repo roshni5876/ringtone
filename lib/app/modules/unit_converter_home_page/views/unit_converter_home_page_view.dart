@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
+import 'package:ring_tone/app/widgets/common_card.dart';
 
-import '../../../widgets/common_card.dart';
-import '../controllers/ring_tones_home_page_controller.dart';
+import '../controllers/unit_converter_home_page_controller.dart';
 
-class RingTonesHomePageView extends GetView<RingTonesHomePageController> {
-  const RingTonesHomePageView({Key? key}) : super(key: key);
+class UnitConverterHomePageView
+    extends GetView<UnitConverterHomePageController> {
+  const UnitConverterHomePageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +18,7 @@ class RingTonesHomePageView extends GetView<RingTonesHomePageController> {
         elevation: 0,
         backgroundColor: AppColors.transparent,
         title: Text(
-          'Ringtones',
+          'Unit Converter',
           style: TextStyle(
               color: AppColors.white,
               fontSize: 20,
@@ -32,9 +33,7 @@ class RingTonesHomePageView extends GetView<RingTonesHomePageController> {
         ),
         actions: [
           IconButton(
-            onPressed: () {
-              Get.toNamed(Routes.SETTINGS_PAGE);
-            },
+            onPressed: () {},
             icon: Icon(
               Icons.settings,
               color: AppColors.white,
@@ -46,7 +45,7 @@ class RingTonesHomePageView extends GetView<RingTonesHomePageController> {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: const [
-          CommonCardUI(title: "Most popular", subTitle: "15 ringtones"),
+          CommonCardUI(title: "Volume", subTitle: "18 units"),
         ],
       ),
     );
