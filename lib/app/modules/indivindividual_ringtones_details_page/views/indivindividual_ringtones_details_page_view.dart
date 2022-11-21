@@ -23,8 +23,10 @@ class IndivindividualRingtonesDetailsPageView
             onPressed: () {
               if (Get.find<RingTonesController>().selectedTab == 0) {
                 Get.back(id: RingTonesNavigatorKey.ringTonesHome);
-              } else {
+              } else if (Get.find<RingTonesController>().selectedTab == 1) {
                 Get.back(id: RingTonesNavigatorKey.ringTonesSearch);
+              } else {
+                Get.back(id: RingTonesNavigatorKey.ringTonesFavorites);
               }
             },
             icon: Icon(

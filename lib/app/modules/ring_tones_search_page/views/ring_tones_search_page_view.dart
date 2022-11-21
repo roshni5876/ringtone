@@ -21,7 +21,10 @@ class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {
         backgroundColor: AppColors.transparent,
         leading: IconButton(
           onPressed: () {
-            Get.toNamed(Routes.RING_TONES_HOME_PAGE);
+            Get.find<RingTonesController>().selectedTab = 0;
+            Get.offNamedUntil(Routes.RING_TONES_HOME_PAGE,
+                ModalRoute.withName(Routes.RING_TONES),
+                id: RingTonesNavigatorKey.ringTonesHome);
           },
           icon: Icon(
             Icons.arrow_back_ios,

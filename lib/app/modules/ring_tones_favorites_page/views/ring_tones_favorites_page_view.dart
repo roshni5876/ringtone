@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ring_tone/app/core/constants/string.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
+import 'package:ring_tone/app/modules/ring_tones/controllers/ring_tones_controller.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
 import '../controllers/ring_tones_favorites_page_controller.dart';
@@ -18,7 +20,10 @@ class RingTonesFavoritesPageView
         backgroundColor: AppColors.transparent,
         leading: IconButton(
           onPressed: () {
-            Get.toEnd(() => Routes.RING_TONES_HOME_PAGE);
+            Get.find<RingTonesController>().selectedTab = 0;
+            Get.offNamedUntil(Routes.RING_TONES_HOME_PAGE,
+                ModalRoute.withName(Routes.RING_TONES),
+                id: RingTonesNavigatorKey.ringTonesHome);
           },
           icon: Icon(
             Icons.arrow_back_ios,
@@ -70,7 +75,14 @@ class RingTonesFavoritesPageView
                   fontWeight: FontWeight.w400),
             ),
             trailing: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
+                    id: (Get.find<RingTonesController>().selectedTab == 0)
+                        ? RingTonesNavigatorKey.ringTonesHome
+                        : (Get.find<RingTonesController>().selectedTab == 1)
+                            ? RingTonesNavigatorKey.ringTonesSearch
+                            : RingTonesNavigatorKey.ringTonesFavorites);
+              },
               icon: Icon(
                 Icons.arrow_circle_right_outlined,
                 color: AppColors.grey,
