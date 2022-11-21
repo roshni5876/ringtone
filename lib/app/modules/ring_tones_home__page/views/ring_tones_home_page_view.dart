@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ring_tone/app/core/constants/string.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
@@ -45,8 +46,15 @@ class RingTonesHomePageView extends GetView<RingTonesHomePageController> {
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Most popular", subTitle: "15 ringtones"),
+        children: [
+          CommonCardUI(
+            title: "Most popular",
+            subTitle: "15 ringtones",
+            onTap: () {
+              Get.toNamed(Routes.INDIVINDIVIDUAL_RINGTONES_PAGE,
+                  id: RingTonesNavigatorKey.ringTonesHome);
+            },
+          ),
         ],
       ),
     );

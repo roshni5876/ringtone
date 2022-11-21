@@ -44,8 +44,12 @@ class AnimatedCallScreenHomePageView
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "nature", subTitle: "56 Animated Call Screen"),
+        children: [
+          CommonCardUI(
+            title: "nature",
+            subTitle: "56 Animated Call Screen",
+            onTap: () {},
+          ),
         ],
       ),
     );

@@ -43,8 +43,12 @@ class ClassicalMusicPageView extends GetView<ClassicalMusicPageController> {
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Popular", subTitle: "29 composition"),
+        children: [
+          CommonCardUI(
+            title: "Popular",
+            subTitle: "29 composition",
+            onTap: () {},
+          ),
         ],
       ),
     );

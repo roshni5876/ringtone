@@ -10,8 +10,10 @@ dependencies:
   get: 4.6.5
   get_cli: ^1.8.1
   animated_card: ^2.0.0
+  elegant_radio_button_group: ^0.0.1
   flutter: 
     sdk: flutter
+  flutter_share: ^2.0.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

@@ -26,6 +26,11 @@ abstract class Routes {
   static const WALLPAPERS_HOME_PAGE = _Paths.WALLPAPERS_HOME_PAGE;
   static const STICKERS_HOME_PAGE = _Paths.STICKERS_HOME_PAGE;
   static const SETTINGS_PAGE = _Paths.SETTINGS_PAGE;
+  static const LANGUAGES_PAGE = _Paths.LANGUAGES_PAGE;
+  static const INDIVINDIVIDUAL_RINGTONES_PAGE =
+      _Paths.INDIVINDIVIDUAL_RINGTONES_PAGE;
+  static const INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE =
+      _Paths.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE;
 }
 
 abstract class _Paths {
@@ -51,4 +56,9 @@ abstract class _Paths {
   static const WALLPAPERS_HOME_PAGE = '/wallpapers-home-page';
   static const STICKERS_HOME_PAGE = '/stickers-home-page';
   static const SETTINGS_PAGE = '/settings-page';
+  static const LANGUAGES_PAGE = '/languages-page';
+  static const INDIVINDIVIDUAL_RINGTONES_PAGE =
+      '/indivindividual-ringtones-page';
+  static const INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE =
+      '/indivindividual-ringtones-details-page';
 }
