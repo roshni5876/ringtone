@@ -5,6 +5,7 @@ class AppColors {
   static Color? primaryColor = Colors.purple[300];
   static Color? blue = Colors.blue[800];
   static Color white = Colors.white;
+  static Color? black = Colors.black;
   static Color? grey = Colors.grey[600];
   static Color? grey900 = Colors.grey[900];
   static Color? red = Colors.red[800];

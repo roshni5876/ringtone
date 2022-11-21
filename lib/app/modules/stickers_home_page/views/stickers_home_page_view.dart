@@ -43,8 +43,12 @@ class StickersHomePageView extends GetView<StickersHomePageController> {
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Animals", subTitle: "28 stickers"),
+        children: [
+          CommonCardUI(
+            title: "Animals",
+            subTitle: "28 stickers",
+            onTap: () {},
+          ),
         ],
       ),
     );
