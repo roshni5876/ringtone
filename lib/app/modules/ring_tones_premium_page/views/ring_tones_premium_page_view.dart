@@ -50,8 +50,109 @@ class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: Container(
+              height: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: AppColors.grey900,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Obx(
+                    () {
+                      return InkWell(
+                        onTap: () {
+                          controller.premiumOptions = PremiumOptions.monthly;
+                        },
+                        child: Container(
+                          width: Get.width / 2.2,
+                          decoration: BoxDecoration(
+                            color: PremiumOptions.monthly ==
+                                    controller.premiumOptions
+                                ? AppColors.yellow
+                                : AppColors.transparent,
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(width: 14.2),
+                              Text(
+                                "Monthly",
+                                style: TextStyle(
+                                    color: PremiumOptions.monthly ==
+                                            controller.premiumOptions
+                                        ? AppColors.black
+                                        : AppColors.grey,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "₹69.99",
+                                style: TextStyle(
+                                    color: PremiumOptions.monthly ==
+                                            controller.premiumOptions
+                                        ? AppColors.black
+                                        : AppColors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  Obx(() => InkWell(
+                        onTap: () {
+                          controller.premiumOptions = PremiumOptions.yearly;
+                        },
+                        child: Container(
+                          width: Get.width / 2.2,
+                          decoration: BoxDecoration(
+                            color: PremiumOptions.yearly ==
+                                    controller.premiumOptions
+                                ? AppColors.yellow
+                                : AppColors.transparent,
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const SizedBox(width: 14.2),
+                              Text(
+                                "Yearly",
+                                style: TextStyle(
+                                    color: PremiumOptions.yearly ==
+                                            controller.premiumOptions
+                                        ? AppColors.black
+                                        : AppColors.grey,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "₹349.99",
+                                style: TextStyle(
+                                    color: PremiumOptions.yearly ==
+                                            controller.premiumOptions
+                                        ? AppColors.black
+                                        : AppColors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )),
+                ],
+              ),
+            ),
+          ),
           CommonRow(
             ic: Icons.queue_music,
             text: '740+ ringtones',
@@ -101,7 +202,7 @@ class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 26,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -118,6 +219,37 @@ class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
                 ),
               ),
             ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Terms of use',
+                  style: TextStyle(
+                      color: AppColors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Privacy policy',
+                  style: TextStyle(
+                      color: AppColors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
           ),
         ],
       ),
