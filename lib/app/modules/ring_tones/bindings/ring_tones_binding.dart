@@ -12,9 +12,9 @@ class RingTonesBinding extends Bindings {
     Get.lazyPut<RingTonesController>(
       () => RingTonesController(argTabNo: Get.arguments),
     );
-    Get.put(RingTonesPremiumPageController());
-    Get.put(RingTonesFavoritesPageController());
-    Get.put(RingTonesSearchPageController());
     Get.put(RingTonesHomePageController());
+    Get.put(RingTonesSearchPageController());
+    Get.put(RingTonesFavoritesPageController());
+    Get.put(RingTonesPremiumPageController());
   }
 }

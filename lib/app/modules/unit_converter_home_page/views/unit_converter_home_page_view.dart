@@ -44,8 +44,12 @@ class UnitConverterHomePageView
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Volume", subTitle: "18 units"),
+        children: [
+          CommonCardUI(
+            title: "Volume",
+            subTitle: "18 units",
+            onTap: () {},
+          ),
         ],
       ),
     );

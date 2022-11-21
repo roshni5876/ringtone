@@ -14,6 +14,12 @@ import '../modules/classical_music_page/bindings/classical_music_page_binding.da
 import '../modules/classical_music_page/views/classical_music_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/indivindividual_ringtones_details_page/bindings/indivindividual_ringtones_details_page_binding.dart';
+import '../modules/indivindividual_ringtones_details_page/views/indivindividual_ringtones_details_page_view.dart';
+import '../modules/indivindividual_ringtones_page/bindings/indivindividual_ringtones_page_binding.dart';
+import '../modules/indivindividual_ringtones_page/views/indivindividual_ringtones_page_view.dart';
+import '../modules/languages_page/bindings/languages_page_binding.dart';
+import '../modules/languages_page/views/languages_page_view.dart';
 import '../modules/live_wallpapers_page/bindings/live_wallpapers_page_binding.dart';
 import '../modules/live_wallpapers_page/views/live_wallpapers_page_view.dart';
 import '../modules/ring_tones/bindings/ring_tones_binding.dart';
@@ -128,6 +134,21 @@ class AppPages {
       name: _Paths.SETTINGS_PAGE,
       page: () => const SettingsPageView(),
       binding: SettingsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.LANGUAGES_PAGE,
+      page: () => const LanguagesPageView(),
+      binding: LanguagesPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.INDIVINDIVIDUAL_RINGTONES_PAGE,
+      page: () => const IndivindividualRingtonesPageView(),
+      binding: IndivindividualRingtonesPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
+      page: () => const IndivindividualRingtonesDetailsPageView(),
+      binding: IndivindividualRingtonesDetailsPageBinding(),
     ),
   ];
 }

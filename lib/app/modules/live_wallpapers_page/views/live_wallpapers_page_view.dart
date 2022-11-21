@@ -43,8 +43,12 @@ class LiveWallpapersPageView extends GetView<LiveWallpapersPageController> {
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Funny", subTitle: "49 live wallpapers"),
+        children: [
+          CommonCardUI(
+            title: "Funny",
+            subTitle: "49 live wallpapers",
+            onTap: () {},
+          ),
         ],
       ),
     );
