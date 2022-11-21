@@ -5,6 +5,8 @@ import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/modules/ring_tones_premium_page/views/common_row.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
+import '../../../core/constants/string.dart';
+import '../../ring_tones/controllers/ring_tones_controller.dart';
 import '../controllers/ring_tones_premium_page_controller.dart';
 
 class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
@@ -18,7 +20,10 @@ class RingTonesPremiumPageView extends GetView<RingTonesPremiumPageController> {
         backgroundColor: AppColors.transparent,
         leading: IconButton(
           onPressed: () {
-            Get.toEnd(() => Routes.RING_TONES_HOME_PAGE);
+            Get.find<RingTonesController>().selectedTab = 0;
+            Get.offNamedUntil(Routes.RING_TONES_HOME_PAGE,
+                ModalRoute.withName(Routes.RING_TONES),
+                id: RingTonesNavigatorKey.ringTonesHome);
           },
           icon: Icon(
             Icons.arrow_back_ios,
