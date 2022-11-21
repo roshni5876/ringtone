@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ring_tone/app/core/constants/string.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 import 'package:ring_tone/app/widgets/common_card.dart';
 
+import '../../ring_tones/controllers/ring_tones_controller.dart';
 import '../../ring_tones/views/bottom_navigtion.dart';
 import '../controllers/ring_tones_search_page_controller.dart';
 
@@ -100,7 +102,12 @@ class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {
           CommonCardUI(
             title: "Most Popular",
             subTitle: "15 ringtones",
-            onTap: () {},
+            onTap: () {
+              Get.toNamed(Routes.INDIVINDIVIDUAL_RINGTONES_PAGE,
+                  id: Get.find<RingTonesController>().selectedTab == 0
+                      ? RingTonesNavigatorKey.ringTonesHome
+                      : RingTonesNavigatorKey.ringTonesSearch);
+            },
           ),
         ],
       ),
