@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:ring_tone/app/core/constants/string.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/modules/indivindividual_ringtones_details_page/views/common_listtile.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
+import '../../../core/constants/string.dart';
+import '../../ring_tones/controllers/ring_tones_controller.dart';
 import '../controllers/indivindividual_ringtones_details_page_controller.dart';
 
 class IndivindividualRingtonesDetailsPageView
@@ -20,7 +21,11 @@ class IndivindividualRingtonesDetailsPageView
           backgroundColor: AppColors.transparent,
           leading: IconButton(
             onPressed: () {
-              Get.back(id: RingTonesNavigatorKey.ringTonesHome);
+              if (Get.find<RingTonesController>().selectedTab == 0) {
+                Get.back(id: RingTonesNavigatorKey.ringTonesHome);
+              } else {
+                Get.back(id: RingTonesNavigatorKey.ringTonesSearch);
+              }
             },
             icon: Icon(
               Icons.arrow_back_ios,
@@ -30,9 +35,7 @@ class IndivindividualRingtonesDetailsPageView
           ),
           actions: [
             IconButton(
-              onPressed: () {
-               
-              },
+              onPressed: () {},
               icon: Icon(
                 Icons.favorite_border,
                 color: AppColors.white,
