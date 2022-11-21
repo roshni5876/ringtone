@@ -6,8 +6,14 @@ import 'package:ring_tone/app/modules/indivindividual_ringtones_details_page/bin
 import 'package:ring_tone/app/modules/indivindividual_ringtones_details_page/views/indivindividual_ringtones_details_page_view.dart';
 import 'package:ring_tone/app/modules/indivindividual_ringtones_page/bindings/indivindividual_ringtones_page_binding.dart';
 import 'package:ring_tone/app/modules/indivindividual_ringtones_page/views/indivindividual_ringtones_page_view.dart';
+import 'package:ring_tone/app/modules/ring_tones_favorites_page/bindings/ring_tones_favorites_page_binding.dart';
+import 'package:ring_tone/app/modules/ring_tones_favorites_page/views/ring_tones_favorites_page_view.dart';
 import 'package:ring_tone/app/modules/ring_tones_home__page/bindings/ring_tones_home_page_binding.dart';
 import 'package:ring_tone/app/modules/ring_tones_home__page/views/ring_tones_home_page_view.dart';
+import 'package:ring_tone/app/modules/ring_tones_premium_page/bindings/ring_tones_premium_page_binding.dart';
+import 'package:ring_tone/app/modules/ring_tones_premium_page/views/ring_tones_premium_page_view.dart';
+import 'package:ring_tone/app/modules/ring_tones_search_page/bindings/ring_tones_search_page_binding.dart';
+import 'package:ring_tone/app/modules/ring_tones_search_page/views/ring_tones_search_page_view.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
 import '../controllers/ring_tones_controller.dart';
@@ -20,11 +26,7 @@ class RingTonesView extends GetView<RingTonesController> {
     return Obx(
       () => Scaffold(
         extendBody: true,
-        // backgroundColor: AppColors.black2,
         bottomNavigationBar: RingTonesBottomNavigtion(),
-        // body: Center(
-        // child: controller.ringTonesWidgetOptions.elementAt(controller.selectedTab),
-        // ),
         body: WillPopScope(
           onWillPop: controller.onWillPop,
           child: IndexedStack(
@@ -58,6 +60,79 @@ class RingTonesView extends GetView<RingTonesController> {
                       default:
                         return MaterialPageRoute(builder: (context) {
                           return const RingTonesHomePageView();
+                        });
+                    }
+                  }),
+              Navigator(
+                  key: Get.nestedKey(RingTonesNavigatorKey.ringTonesSearch),
+                  onGenerateRoute: (settings) {
+                    switch (settings.name) {
+                      case Routes.RING_TONES_SEARCH_PAGE:
+                        return GetPageRoute(
+                          routeName: Routes.RING_TONES_SEARCH_PAGE,
+                          page: () => const RingTonesSearchPageView(),
+                          binding: RingTonesSearchPageBinding(),
+                        );
+
+                      case Routes.INDIVINDIVIDUAL_RINGTONES_PAGE:
+                        return GetPageRoute(
+                          routeName: Routes.INDIVINDIVIDUAL_RINGTONES_PAGE,
+                          page: () => const IndivindividualRingtonesPageView(),
+                          binding: IndivindividualRingtonesPageBinding(),
+                        );
+                      case Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE:
+                        return GetPageRoute(
+                          routeName:
+                              Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
+                          page: () =>
+                              const IndivindividualRingtonesDetailsPageView(),
+                          binding: IndivindividualRingtonesDetailsPageBinding(),
+                        );
+                      default:
+                        return MaterialPageRoute(builder: (context) {
+                          return const RingTonesSearchPageView();
+                        });
+                    }
+                  }),
+              Navigator(
+                  key: Get.nestedKey(RingTonesNavigatorKey.ringTonesFavorites),
+                  onGenerateRoute: (settings) {
+                    switch (settings.name) {
+                      case Routes.RING_TONES_FAVORITES_PAGE:
+                        return GetPageRoute(
+                          routeName: Routes.RING_TONES_FAVORITES_PAGE,
+                          page: () => const RingTonesFavoritesPageView(),
+                          binding: RingTonesFavoritesPageBinding(),
+                        );
+
+                      case Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE:
+                        return GetPageRoute(
+                          routeName:
+                              Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
+                          page: () =>
+                              const IndivindividualRingtonesDetailsPageView(),
+                          binding: IndivindividualRingtonesDetailsPageBinding(),
+                        );
+                      default:
+                        return MaterialPageRoute(builder: (context) {
+                          return const RingTonesFavoritesPageView();
+                        });
+                    }
+                  }),
+              Navigator(
+                  key: Get.nestedKey(RingTonesNavigatorKey.ringTonesPremium),
+                  onGenerateRoute: (settings) {
+                    switch (settings.name) {
+                      case Routes.RING_TONES_PREMIUM_PAGE:
+                        return GetPageRoute(
+                          routeName: Routes.RING_TONES_PREMIUM_PAGE,
+                          page: () => const RingTonesPremiumPageView(),
+                          binding: RingTonesPremiumPageBinding(),
+                        );
+
+                   default:
+                        return MaterialPageRoute(builder: (context) {
+                          return const RingTonesPremiumPageView();
                         });
                     }
                   }),

@@ -6,6 +6,7 @@ import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/modules/indivindividual_ringtones_page/views/common_listtile.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 
+import '../../ring_tones/controllers/ring_tones_controller.dart';
 import '../controllers/indivindividual_ringtones_page_controller.dart';
 
 class IndivindividualRingtonesPageView
@@ -20,7 +21,11 @@ class IndivindividualRingtonesPageView
         backgroundColor: AppColors.transparent,
         leading: IconButton(
           onPressed: () {
-            Get.back(id: RingTonesNavigatorKey.ringTonesHome);
+            if (Get.find<RingTonesController>().selectedTab == 0) {
+              Get.back(id: RingTonesNavigatorKey.ringTonesHome);
+            } else {
+              Get.back(id: RingTonesNavigatorKey.ringTonesSearch);
+            }
           },
           icon: Icon(
             Icons.arrow_back_ios,
@@ -57,7 +62,9 @@ class IndivindividualRingtonesPageView
               title: "8-bit Phone",
               onTap: () {
                 Get.toNamed(Routes.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
-                    id: RingTonesNavigatorKey.ringTonesHome);
+                    id: (Get.find<RingTonesController>().selectedTab == 0)
+                        ? RingTonesNavigatorKey.ringTonesHome
+                        : RingTonesNavigatorKey.ringTonesSearch);
               }),
         ],
       ),
