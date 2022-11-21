@@ -43,8 +43,12 @@ class WallpapersHomePageView extends GetView<WallpapersHomePageController> {
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),
-        children: const [
-          CommonCardUI(title: "Christmas", subTitle: "66 wallpapers"),
+        children: [
+          CommonCardUI(
+            title: "Christmas",
+            subTitle: "66 wallpapers",
+            onTap: () {},
+          ),
         ],
       ),
     );

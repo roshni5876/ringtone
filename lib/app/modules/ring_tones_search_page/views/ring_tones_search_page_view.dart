@@ -5,7 +5,7 @@ import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/routes/app_pages.dart';
 import 'package:ring_tone/app/widgets/common_card.dart';
 
-import '../../../widgets/bottom_navigtion.dart';
+import '../../ring_tones/views/bottom_navigtion.dart';
 import '../controllers/ring_tones_search_page_controller.dart';
 
 class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {
@@ -17,17 +17,16 @@ class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColors.transparent,
-        // leading: IconButton(
-        //   onPressed: () {
-        //     Get.toEnd(() => Routes.RING_TONES_HOME_PAGE);
-
-        //   },
-        //   icon: Icon(
-        //     Icons.arrow_back_ios,
-        //     color: AppColors.grey,
-        //     size: 20,
-        //   ),
-        // ),
+        leading: IconButton(
+          onPressed: () {
+            Get.toNamed(Routes.RING_TONES_HOME_PAGE);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: AppColors.grey,
+            size: 20,
+          ),
+        ),
         title: Text(
           'Search',
           style: TextStyle(
@@ -98,9 +97,10 @@ class RingTonesSearchPageView extends GetView<RingTonesSearchPageController> {
           const SizedBox(
             height: 8,
           ),
-          const CommonCardUI(
+          CommonCardUI(
             title: "Most Popular",
             subTitle: "15 ringtones",
+            onTap: () {},
           ),
         ],
       ),
