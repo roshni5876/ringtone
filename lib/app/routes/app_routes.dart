@@ -31,6 +31,14 @@ abstract class Routes {
       _Paths.INDIVINDIVIDUAL_RINGTONES_PAGE;
   static const INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE =
       _Paths.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE;
+  static const CLASSICAL_MUSIC_HOME_PAGE = _Paths.CLASSICAL_MUSIC_HOME_PAGE;
+  static const CLASSICAL_MUSIC_SEARCH_PAGE = _Paths.CLASSICAL_MUSIC_SEARCH_PAGE;
+  static const CLASSICAL_MUSIC_FAVORITES_PAGE =
+      _Paths.CLASSICAL_MUSIC_FAVORITES_PAGE;
+  static const CLASSICAL_MUSIC_PREMIUM_PAGE =
+      _Paths.CLASSICAL_MUSIC_PREMIUM_PAGE;
+  static const INDIVIDUAL_CLASSICAL_MUSIC_PAGE =
+      _Paths.INDIVIDUAL_CLASSICAL_MUSIC_PAGE;
 }
 
 abstract class _Paths {
@@ -61,4 +69,11 @@ abstract class _Paths {
       '/indivindividual-ringtones-page';
   static const INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE =
       '/indivindividual-ringtones-details-page';
+  static const CLASSICAL_MUSIC_HOME_PAGE = '/classical-music-home-page';
+  static const CLASSICAL_MUSIC_SEARCH_PAGE = '/classical-music-search-page';
+  static const CLASSICAL_MUSIC_FAVORITES_PAGE =
+      '/classical-music-favorites-page';
+  static const CLASSICAL_MUSIC_PREMIUM_PAGE = '/classical-music-premium-page';
+  static const INDIVIDUAL_CLASSICAL_MUSIC_PAGE =
+      '/individual-classical-music-page';
 }

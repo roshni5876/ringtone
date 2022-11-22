@@ -10,10 +10,20 @@ import '../modules/animated_call_screen_premium_page/bindings/animated_call_scre
 import '../modules/animated_call_screen_premium_page/views/animated_call_screen_premium_page_view.dart';
 import '../modules/animated_call_screen_search_page/bindings/animated_call_screen_search_page_binding.dart';
 import '../modules/animated_call_screen_search_page/views/animated_call_screen_search_page_view.dart';
+import '../modules/classical_music_favorites_page/bindings/classical_music_favorites_page_binding.dart';
+import '../modules/classical_music_favorites_page/views/classical_music_favorites_page_view.dart';
+import '../modules/classical_music_home_page/bindings/classical_music_home_page_binding.dart';
+import '../modules/classical_music_home_page/views/classical_music_home_page_view.dart';
 import '../modules/classical_music_page/bindings/classical_music_page_binding.dart';
 import '../modules/classical_music_page/views/classical_music_page_view.dart';
+import '../modules/classical_music_premium_page/bindings/classical_music_premium_page_binding.dart';
+import '../modules/classical_music_premium_page/views/classical_music_premium_page_view.dart';
+import '../modules/classical_music_search_page/bindings/classical_music_search_page_binding.dart';
+import '../modules/classical_music_search_page/views/classical_music_search_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/individual_classical_music_page/bindings/individual_classical_music_page_binding.dart';
+import '../modules/individual_classical_music_page/views/individual_classical_music_page_view.dart';
 import '../modules/indivindividual_ringtones_details_page/bindings/indivindividual_ringtones_details_page_binding.dart';
 import '../modules/indivindividual_ringtones_details_page/views/indivindividual_ringtones_details_page_view.dart';
 import '../modules/indivindividual_ringtones_page/bindings/indivindividual_ringtones_page_binding.dart';
@@ -149,6 +159,31 @@ class AppPages {
       name: _Paths.INDIVINDIVIDUAL_RINGTONES_DETAILS_PAGE,
       page: () => const IndivindividualRingtonesDetailsPageView(),
       binding: IndivindividualRingtonesDetailsPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASSICAL_MUSIC_HOME_PAGE,
+      page: () => const ClassicalMusicHomePageView(),
+      binding: ClassicalMusicHomePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASSICAL_MUSIC_SEARCH_PAGE,
+      page: () => const ClassicalMusicSearchPageView(),
+      binding: ClassicalMusicSearchPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASSICAL_MUSIC_FAVORITES_PAGE,
+      page: () => const ClassicalMusicFavoritesPageView(),
+      binding: ClassicalMusicFavoritesPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASSICAL_MUSIC_PREMIUM_PAGE,
+      page: () => const ClassicalMusicPremiumPageView(),
+      binding: ClassicalMusicPremiumPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.INDIVIDUAL_CLASSICAL_MUSIC_PAGE,
+      page: () => const IndividualClassicalMusicPageView(),
+      binding: IndividualClassicalMusicPageBinding(),
     ),
   ];
 }

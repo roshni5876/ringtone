@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/theme/colors.dart';
-import '../controllers/ring_tones_controller.dart';
+import 'package:ring_tone/app/core/theme/colors.dart';
+import 'package:ring_tone/app/modules/classical_music_page/controllers/classical_music_page_controller.dart';
 
-class RingTonesBottomNavigtion extends StatelessWidget {
-  RingTonesBottomNavigtion({Key? key}) : super(key: key);
-  final controller = Get.put(RingTonesController());
-
+class ClassicalMusicNavigtion extends StatelessWidget {
+  ClassicalMusicNavigtion({Key? key}) : super(key: key);
+  final controller = Get.put(ClassicalMusicPageController());
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +32,7 @@ class RingTonesBottomNavigtion extends StatelessWidget {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.queue_music),
-            label: 'Home',
+            label: 'Homeee',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
