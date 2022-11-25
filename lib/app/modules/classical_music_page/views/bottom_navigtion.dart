@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:ring_tone/app/core/theme/colors.dart';
 import 'package:ring_tone/app/modules/classical_music_page/controllers/classical_music_page_controller.dart';
 
-class ClassicalMusicNavigtion extends StatelessWidget {
-  ClassicalMusicNavigtion({Key? key}) : super(key: key);
+class ClassicalMusicBottomNavigtion extends StatelessWidget {
+  ClassicalMusicBottomNavigtion({Key? key}) : super(key: key);
   final controller = Get.put(ClassicalMusicPageController());
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class ClassicalMusicNavigtion extends StatelessWidget {
         ],
       ),
       child: BottomNavigationBar(
+         key: controller.classicalMusicScaffoldKey,
         elevation: 0,
         backgroundColor: AppColors.black2,
         onTap: controller.selectPage,
@@ -36,7 +37,7 @@ class ClassicalMusicNavigtion extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: 'Searchhh',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ClassicalMusicPageController extends GetxController {
@@ -7,7 +8,7 @@ class ClassicalMusicPageController extends GetxController {
   final _selectedTab = 0.obs;
   int get selectedTab => _selectedTab.value;
   set selectedTab(int value) => _selectedTab.value = value;
-
+  final classicalMusicScaffoldKey = GlobalKey<ScaffoldState>();
   DateTime? currentBackPressTime;
 
   @override

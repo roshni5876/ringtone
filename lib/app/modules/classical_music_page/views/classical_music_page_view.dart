@@ -21,8 +21,9 @@ class ClassicalMusicPageView extends GetView<ClassicalMusicPageController> {
   Widget build(BuildContext context) {
     return Obx(
       () => Scaffold(
+       
         extendBody: true,
-        bottomNavigationBar: ClassicalMusicNavigtion(),
+        bottomNavigationBar: ClassicalMusicBottomNavigtion(),
         body: WillPopScope(
           onWillPop: controller.onWillPop,
           child: IndexedStack(

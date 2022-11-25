@@ -130,7 +130,7 @@ class RingTonesView extends GetView<RingTonesController> {
                           binding: RingTonesPremiumPageBinding(),
                         );
 
-                   default:
+                      default:
                         return MaterialPageRoute(builder: (context) {
                           return const RingTonesPremiumPageView();
                         });
